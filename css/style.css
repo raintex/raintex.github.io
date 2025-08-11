@@ -101,21 +101,39 @@ body{
 
 /* hero */
 .hero {
+  position: relative; /* required for ::before positioning */
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 28px;
   align-items: start;
   padding: 44px 0;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(252,191,73,0.10) 0%,  /* soft gold center */
-      rgba(252,191,73,0) 80%     /* fade to transparent */
-    ),
-    linear-gradient(180deg, var(--bg), var(--bg-2)); /* same as page */
-  background-blend-mode: screen;
+  background: linear-gradient(180deg, var(--bg), var(--bg-2)); /* same as page bg */
   border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden; /* hides ::before spill only on the top/bottom */
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(252,191,73,0.10) 0%,
+    rgba(252,191,73,0) 70%
+  );
+  background-blend-mode: screen;
+  pointer-events: none; /* ensures clicks pass through */
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative; /* keep content above the gradient */
+  z-index: 1;
+}
+
 
 
 
