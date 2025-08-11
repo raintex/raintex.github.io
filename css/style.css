@@ -79,3 +79,16 @@ body{
   .hero{grid-template-columns:1fr;gap:18px}
   .features .grid-3{grid-template-columns:1fr}
 }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between photo and name */
+}
+
+.brand-photo {
+  width: 28px;       /* small size */
+  height: 28px;
+  border-radius: 50%; /* circular */
+  object-fit: cover; /* crop nicely */
+  border: 1px solid rgba(255,255,255,0.1); /* subtle border */
+}
