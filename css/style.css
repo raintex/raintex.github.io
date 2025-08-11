@@ -26,8 +26,51 @@ body{
 
 /* layout */
 .container{max-width:1000px;margin:0 auto;padding:28px}
-.header-grid{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-weight:700;font-size:1.05rem;color:var(--text);text-decoration:none}
+
+/* header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(4, 47, 48, 0.95), rgba(4, 47, 48, 0.85));
+  backdrop-filter: blur(6px);
+  z-index: 50;
+  padding: 12px 0; /* more breathing space */
+}
+
+.header-grid {
+  display: flex;
+  align-items: center; /* center content vertically */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center; /* center image & text */
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%; /* circular */
+  object-fit: cover;  /* crop nicely */
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Smaller size on mobile */
+@media (max-width: 600px) {
+  .brand-photo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .nav{display:flex;gap:14px;align-items:center}
 .nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
 .nav a[aria-current="page"], .nav a:hover{color:var(--text);background:rgba(255,255,255,0.03)}
@@ -48,9 +91,6 @@ body{
 /* profile */
 .profile-frame{width:260px;height:260px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 10px 30px rgba(2,8,12,0.6)}
 .profile-frame img{width:100%;height:100%;object-fit:cover;display:block}
-.upload-label{display:block;margin-top:12px;color:var(--muted);font-size:0.9rem}
-.file-input{margin-top:6px}
-.hint{display:block;color:var(--muted);font-size:0.8rem;margin-top:6px}
 
 /* features */
 .features .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
@@ -79,30 +119,3 @@ body{
   .hero{grid-template-columns:1fr;gap:18px}
   .features .grid-3{grid-template-columns:1fr}
 }
-.brand {
-  display: flex;
-  align-items: center; /* centers text vertically with image */
-  gap: 10px;           /* space between image and name */
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.brand-photo {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%; /* circular */
-  object-fit: cover;  /* crop nicely */
-  display: inline-block;
-  border: 2px solid rgba(255,255,255,0.3);
-}
-
-/* Smaller size on mobile */
-@media (max-width: 600px) {
-  .brand-photo {
-    width: 48px;
-    height: 48px;
-  }
-}
-
