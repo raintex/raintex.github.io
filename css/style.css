@@ -382,3 +382,9 @@ body {
 }
 .two-col .card:nth-child(1) { animation-delay: 0.05s; }
 .two-col .card:nth-child(2) { animation-delay: 0.1s; }
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align tiles horizontally */
+  gap: 20px; /* Optional: adds space between tiles */
+}
