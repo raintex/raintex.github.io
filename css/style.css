@@ -434,6 +434,8 @@ body {
 /* slow breathing / pulse effect */
 .brand-hero .atom {
   display: block;
+  width: 100%;   /* make atom fill the emblem box */
+  height: 100%;
   will-change: transform, opacity;
   transform-origin: 50% 50%;
   animation: atom-pulse 3.6s ease-in-out infinite;
