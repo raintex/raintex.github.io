@@ -165,8 +165,8 @@ body {
 /* Download CV button */
 .btn-download {
   background: var(--accent);
-  color: var(--bg);
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  color: #222; /* dark charcoal */
+  text-shadow: none;
   padding: 10px 14px;
   border-radius: 10px;
   text-decoration: none;
