@@ -378,3 +378,65 @@ body{
 .contact-list li:hover svg {
   color: var(--text); /* changes both text & icon to white */
 }
+.contact-section {
+  padding: 40px 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 1.8rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  background: var(--glass);
+}
+
+.contact-card .icon {
+  margin-bottom: 10px;
+}
+
+.contact-card svg {
+  width: 36px;
+  height: 36px;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.contact-card:hover svg {
+  color: var(--text);
+}
+
+.contact-card h3 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.contact-card a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-card:hover a {
+  color: var(--text);
+}
