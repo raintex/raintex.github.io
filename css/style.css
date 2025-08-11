@@ -175,17 +175,18 @@ body{
 }
 
 /* NEW: solid gold "Download CV" button */
-.btn-download{
-  background:var(--accent);
-  color:var(--bg);
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.2s;
+.btn-download {
+  background: var(--accent);
+  color: var(--bg); /* dark teal text */
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
 }
-.btn-download:hover{
-  background:var(--accent-dark);
+.btn-download:hover {
+  background: var(--accent-dark);
+  color: var(--bg); /* still teal text on hover */
 }
 
 /* profile */
