@@ -338,3 +338,20 @@ body {
 @keyframes popBullet {
   to { opacity: 1; transform: scale(1); }
 }
+/* === Custom spacing for stacked cards in About and Research sections === */
+
+/* About page right-column cards */
+.two-col .card {
+  margin-bottom: 20px;
+}
+.two-col .card:last-child {
+  margin-bottom: 0;
+}
+
+/* Research section cards */
+.exp.card {
+  margin-bottom: 20px;
+}
+.exp.card:last-child {
+  margin-bottom: 0;
+}
