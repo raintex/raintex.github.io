@@ -173,7 +173,7 @@ body {
   font-weight: 600;
   transition: 0.2s;
 }
-.btn-download:hover { background: var(--accent-dark); }
+.btn-download:hover { background: var(--accent-dark) !important; }
 
 /* features */
 .features .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 18px; }
