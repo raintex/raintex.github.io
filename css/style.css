@@ -81,14 +81,28 @@ body{
 }
 .brand {
   display: flex;
-  align-items: center;
-  gap: 8px; /* space between photo and name */
+  align-items: center; /* centers text vertically with image */
+  gap: 10px;           /* space between image and name */
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
 .brand-photo {
-  width: 28px;       /* small size */
-  height: 28px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%; /* circular */
-  object-fit: cover; /* crop nicely */
-  border: 1px solid rgba(255,255,255,0.1); /* subtle border */
+  object-fit: cover;  /* crop nicely */
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.3);
 }
+
+/* Smaller size on mobile */
+@media (max-width: 600px) {
+  .brand-photo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
