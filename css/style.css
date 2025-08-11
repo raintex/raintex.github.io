@@ -51,7 +51,7 @@ body{
   gap: 10px;
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--accent); /* brand now gold */
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -61,10 +61,9 @@ body{
   border-radius: 50%;
   object-fit: cover;
   display: inline-block;
-  border: 2px solid var(--accent-dark); /* gold border */
+  border: 2px solid var(--accent-dark);
 }
 
-/* Smaller size on mobile */
 @media (max-width: 600px) {
   .brand-photo {
     width: 48px;
@@ -101,15 +100,23 @@ body{
 .menu-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:1.25rem}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;padding:44px 0}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:28px;
+  align-items:start;
+  padding:44px 0;
+  background: linear-gradient(135deg, rgba(252,191,73,0.12), rgba(252,191,73,0) 70%);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 .hero-left h1{
   font-size:2.1rem;
   margin:0 0 6px;
-  color:var(--accent); /* gold heading */
+  color:var(--accent);
 }
 .lead{color:var(--muted);margin-bottom:12px}
 .meta{color:var(--muted);font-size:0.95rem}
-.hero-ctas{margin:16px 0}
+.hero-ctas{margin:16px 0;display:flex;flex-wrap:wrap;gap:12px}
 .btn-primary{
   background:var(--accent);
   color:var(--bg);
@@ -134,12 +141,26 @@ body{
   color:var(--bg);
 }
 
+/* NEW: solid gold "Download CV" button */
+.btn-download{
+  background:var(--accent);
+  color:var(--bg);
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+}
+.btn-download:hover{
+  background:var(--accent-dark);
+}
+
 /* profile */
 .profile-frame{
   width:260px;
   height:260px;
   border-radius:18px;
-  border:3px solid var(--accent); /* gold border */
+  border:3px solid var(--accent);
   background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
   display:flex;
   align-items:center;
@@ -161,7 +182,7 @@ body{
   padding:16px;
   border-radius:12px;
   box-shadow:0 6px 24px rgba(0,0,0,0.4);
-  border-top:4px solid var(--accent); /* gold accent bar */
+  border-top:4px solid var(--accent);
 }
 .card.sm{
   padding:10px;
@@ -179,13 +200,25 @@ body{
   font-weight:600;
 }
 
-/* other helpers */
+/* sections */
 .section{
   padding:36px 0;
   border-top:1px solid rgba(255,255,255,0.02)
 }
 .section h1, .section h2, .section h3{
   color:var(--accent);
+  position:relative;
+  padding-bottom:6px;
+}
+.section h1::after, .section h2::after, .section h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:40px;
+  height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-dark));
+  border-radius:2px;
 }
 .two-col{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start}
 .pub-list{list-style:none;padding:0;margin:0}
