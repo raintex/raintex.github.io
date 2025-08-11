@@ -177,7 +177,8 @@ body{
 /* NEW: solid gold "Download CV" button */
 .btn-download {
   background: var(--accent);
-  color: var(--bg); /* dark teal text */
+  color: var(--bg);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* shadow to boost contrast */
   padding: 10px 14px;
   border-radius: 10px;
   text-decoration: none;
@@ -186,8 +187,8 @@ body{
 }
 .btn-download:hover {
   background: var(--accent-dark);
-  color: var(--bg); /* still teal text on hover */
 }
+
 
 /* profile */
 .profile-frame{
