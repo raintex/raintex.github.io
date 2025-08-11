@@ -326,3 +326,35 @@ body{
 .contact-list a:hover {
   text-decoration: underline;
 }
+/* Contact icons and hover effect */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-list svg {
+  min-width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.contact-list li:hover a,
+.contact-list li:hover svg {
+  color: var(--text); /* changes both text & icon to white */
+}
