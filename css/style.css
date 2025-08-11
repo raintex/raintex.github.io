@@ -229,9 +229,11 @@ body {
 .contact-section h2 { text-align: center; margin-bottom: 28px; font-size: 1.8rem; }
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-  gap: 20px; /* spacing between cards */
-  justify-items: center; /* center align cards in cells */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px; /* keeps grid to about 4 cards wide */
+  margin: 0 auto; /* centers the whole grid */
 
 }
 .contact-card {
