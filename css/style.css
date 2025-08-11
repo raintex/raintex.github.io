@@ -119,3 +119,12 @@ body{
   .hero{grid-template-columns:1fr;gap:18px}
   .features .grid-3{grid-template-columns:1fr}
 }
+.pub-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}
