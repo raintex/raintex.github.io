@@ -107,14 +107,16 @@ body{
   align-items: start;
   padding: 44px 0;
   background:
-    radial-gradient(ellipse at center,
-      rgba(252,191,73,0.10) 0%,   /* softer gold */
-      rgba(252,191,73,0) 80%      /* fade out further */
+    radial-gradient(
+      ellipse at center,
+      rgba(252,191,73,0.10) 0%,  /* soft gold center */
+      rgba(252,191,73,0) 80%     /* fade to transparent */
     ),
-    linear-gradient(180deg, var(--bg), var(--bg-2)); /* seamless site bg */
+    linear-gradient(180deg, var(--bg), var(--bg-2)); /* same as page */
   background-blend-mode: screen;
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+
 
 
 /* Profile frame with gold glow */
