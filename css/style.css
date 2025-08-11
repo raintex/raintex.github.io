@@ -391,3 +391,6 @@ body {
   justify-content: center; /* Center align tiles horizontally */
   gap: 20px; /* Optional: adds space between tiles */
 }
+.contact-page h1 {
+  text-align: center;
+}
