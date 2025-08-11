@@ -371,6 +371,13 @@ body {
 .two-col .card {
   opacity: 0;
   transform: translateY(5px);
+  #education .card {
+  margin-bottom: 20px;
+}
+#education .card:last-child {
+  margin-bottom: 0;
+}
+
   animation: fadeBullet 0.5s ease forwards;
 }
 .two-col .card:nth-child(1) { animation-delay: 0.05s; }
