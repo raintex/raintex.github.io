@@ -488,31 +488,38 @@ body {
   .brand-hero .rr { font-size: 0.95rem; }
 }
 /* =================================
-   Mobile Navigation
+   Mobile & Tablet Navigation
    ================================= */
 @media (max-width: 760px) {
-  /* Hides the navigation links by default on mobile */
+  /* Style for the hamburger button */
+  .menu-toggle {
+    display: block; /* Makes the button visible on mobile */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--accent); /* Uses your site's gold accent color */
+    font-size: 1.5rem;
+    z-index: 1001; /* Ensures it's on top of other content */
+  }
+
+  /* Base style for the navigation menu on mobile */
   .nav {
-    display: none;
-    flex-direction: column;
+    display: none; /* The menu is hidden by default */
     position: absolute;
-    right: 18px;
-    top: 60px;
+    top: 65px; /* Position it just below the header */
+    right: 20px;
+    width: 200px;
     background: var(--card);
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    flex-direction: column; /* Stack the links vertically */
+    align-items: flex-start;
     z-index: 1000;
   }
 
-  /* This class, added by the JavaScript, makes the menu visible */
+  /* This class is toggled by JavaScript to show the menu */
   .nav.nav-open {
     display: flex;
-  }
-
-  /* Makes the hamburger button visible and clickable on mobile */
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
   }
 }
