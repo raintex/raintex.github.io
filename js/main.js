@@ -9,5 +9,5 @@ const menu = document.querySelector('.nav');
 const toggle = document.getElementById('menuToggle');
 
 toggle?.addEventListener('click', () => {
-  menu?.classList.toggle('is-open');
+  menu.classList.toggle('nav-open');
 });
