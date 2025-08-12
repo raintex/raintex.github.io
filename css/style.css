@@ -488,13 +488,19 @@ body {
   .brand-hero .hero-emblem { width: 36px; height: 36px; border-radius: 8px; }
   .brand-hero .rr { font-size: 0.95rem; }
 }
-@media (max-width: 760px) {
+@media (max-width:760px) {
   .nav {
-    flex-direction: column; /* Stacks menu items vertically */
-    align-items: flex-start; /* Aligns items to the left */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stacks the links vertically */
+    position: absolute;
+    right: 18px;
+    top: 68px;
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
   }
 
-  .nav.is-open {
-    display: flex; /* Shows the menu */
+  .nav.nav-open {
+    display: flex; /* Shown when the button is clicked */
   }
-}
