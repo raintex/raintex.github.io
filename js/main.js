@@ -1,5 +1,13 @@
+// js/main.js
 document.addEventListener('DOMContentLoaded', function () {
-  // Handles the mobile menu toggle
+  // Set the current year in the footer
+  document.querySelectorAll('#year, #year2, #year3, #year4, #year5').forEach(span => {
+    if (span) {
+      span.textContent = new Date().getFullYear();
+    }
+  });
+
+  // Handle mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.querySelector('.nav');
 
@@ -8,12 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
       navMenu.classList.toggle('nav-open');
     });
   }
-
-  // Sets the current year in the footer spans
-  const yearSpans = document.querySelectorAll('#year, #year2, #year3, #year4, #year5');
-  yearSpans.forEach(span => {
-    if (span) {
-      span.textContent = new Date().getFullYear();
-    }
-  });
 });
