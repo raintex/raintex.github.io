@@ -1,13 +1,19 @@
-// js/main.js
-document.getElementById('year')?.textContent = new Date().getFullYear();
-document.getElementById('year2')?.textContent = new Date().getFullYear();
-document.getElementById('year3')?.textContent = new Date().getFullYear();
-document.getElementById('year4')?.textContent = new Date().getFullYear();
-document.getElementById('year5')?.textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function () {
+  // Handles the mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.querySelector('.nav');
 
-const menu = document.querySelector('.nav');
-const toggle = document.getElementById('menuToggle');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function () {
+      navMenu.classList.toggle('nav-open');
+    });
+  }
 
-toggle?.addEventListener('click', () => {
-  menu.classList.toggle('nav-open');
+  // Sets the current year in the footer spans
+  const yearSpans = document.querySelectorAll('#year, #year2, #year3, #year4, #year5');
+  yearSpans.forEach(span => {
+    if (span) {
+      span.textContent = new Date().getFullYear();
+    }
+  });
 });
