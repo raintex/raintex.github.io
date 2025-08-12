@@ -90,7 +90,7 @@ body {
 .btn-outline:hover { background: var(--accent); color: var(--bg); }
 
 /* mobile menu */
-.menu-toggle { display: none; background: transparent; border: 0; color: var(--muted); font-size: 1.25rem; }
+.menu-toggle { display: none; background: transparent; border: 0; color: var(--accent); font-size: 1.5rem; /* Increased size slightly for better visibility */ }
 
 /* hero */
 .hero {
@@ -487,4 +487,14 @@ body {
   .brand-hero { gap: 8px; }
   .brand-hero .hero-emblem { width: 36px; height: 36px; border-radius: 8px; }
   .brand-hero .rr { font-size: 0.95rem; }
+}
+@media (max-width: 760px) {
+  .nav {
+    flex-direction: column; /* Stacks menu items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+  }
+
+  .nav.is-open {
+    display: flex; /* Shows the menu */
+  }
 }
