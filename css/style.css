@@ -512,3 +512,21 @@ body {
     display: flex;
   }
 }
+/* =================================
+   Publication Link Styles
+   ================================= */
+.pub-list .pub-link {
+  color: var(--accent);      /* Sets the link color to your gold accent */
+  text-decoration: none;   /* Removes the underline */
+  transition: color 0.2s ease; /* Adds a smooth color transition on hover */
+}
+
+/* Prevents the link from changing color after being visited */
+.pub-list .pub-link:visited {
+  color: var(--accent);
+}
+
+/* Darkens the link slightly when you hover over it */
+.pub-list .pub-link:hover {
+  color: var(--accent-dark);
+}
