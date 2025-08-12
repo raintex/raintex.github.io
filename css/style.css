@@ -543,4 +543,32 @@ body {
     display: block; /* Make sure the button is visible */
     z-index: 100; /* Ensure the button is on top of other elements */
   }
+}/* =================================
+   Mobile Navigation Fix
+   ================================= */
+
+@media (max-width: 760px) {
+  /* 1. Ensure the menu is hidden by default */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 18px;
+    top: 60px;
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  }
+
+  /* 2. Make the hamburger button visible and clickable */
+  .menu-toggle {
+    display: block;
+    cursor: pointer; /* Makes it clear it's clickable */
+  }
+
+  /* 3. This is the class that the JavaScript will add/remove */
+  .nav.nav-open {
+    display: flex; /* This will show the menu */
+  }
 }
