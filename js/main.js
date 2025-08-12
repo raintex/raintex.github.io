@@ -1,19 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Sets the current year in the footer spans
-  const yearSpans = document.querySelectorAll('#year, #year2, #year3, #year4, #year5');
-  yearSpans.forEach(span => {
-    if (span) {
-      span.textContent = new Date().getFullYear();
-    }
-  });
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.querySelector('.nav');
 
-  // Handles the mobile menu toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.querySelector('nav.nav'); // More specific selector
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function () {
-      navMenu.classList.toggle('nav-open');
-    });
-  }
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('nav-open');
 });
+
+// This part for the year can be removed if it causes issues, but it should be fine.
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
