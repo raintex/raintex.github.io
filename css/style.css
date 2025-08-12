@@ -199,7 +199,7 @@ body {
 }
 
 /* sections */
-.section { padding: 36px 0; border-top: 1px solid rgba(255,255,255,0.02); }
+.section { padding: 36px 28px; border-top: 1px solid rgba(255,255,255,0.02); }
 .section h1, .section h2, .section h3 {
   color: var(--accent);
   position: relative;
