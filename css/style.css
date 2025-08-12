@@ -487,95 +487,11 @@ body {
   .brand-hero .hero-emblem { width: 36px; height: 36px; border-radius: 8px; }
   .brand-hero .rr { font-size: 0.95rem; }
 }
-/* === Navigation Menu === */
-.nav {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-/* --- Mobile Navigation Styles --- */
-@media (max-width: 760px) {
-  .menu-toggle {
-    display: block; /* Show hamburger icon */
-  }
-
-  .nav {
-    display: none; /* Hide menu by default */
-    position: absolute;
-    top: 68px;
-    right: 18px;
-    width: 220px;
-    background: var(--card);
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    padding: 16px;
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-start;
-  }
-
-  .nav.nav-open {
-    display: flex; /* Show menu when toggled */
-  }
-}
-/* === Mobile Menu Override === */
-@media (max-width: 760px) {
-  .nav {
-    display: none; /* Keep it hidden by default */
-    position: absolute;
-    right: 18px;
-    top: 60px; /* Adjusted position slightly */
-    background: var(--card);
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  /* This is the key part: it shows the menu when the class is added */
-  .nav.nav-open {
-    display: flex !important; /* Use !important to force the display */
-  }
-
-  .menu-toggle {
-    display: block; /* Make sure the button is visible */
-    z-index: 100; /* Ensure the button is on top of other elements */
-  }
-}/* =================================
-   Mobile Navigation Fix
-   ================================= */
-
-@media (max-width: 760px) {
-  /* 1. Ensure the menu is hidden by default */
-  .nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 18px;
-    top: 60px;
-    background: var(--card);
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-  }
-
-  /* 2. Make the hamburger button visible and clickable */
-  .menu-toggle {
-    display: block;
-    cursor: pointer; /* Makes it clear it's clickable */
-  }
-
-  /* 3. This is the class that the JavaScript will add/remove */
-  .nav.nav-open {
-    display: flex; /* This will show the menu */
-  }
-}
 /* =================================
-   Mobile Navigation Fix
+   Mobile Navigation
    ================================= */
 @media (max-width: 760px) {
+  /* Hides the navigation links by default on mobile */
   .nav {
     display: none;
     flex-direction: column;
@@ -585,14 +501,16 @@ body {
     background: var(--card);
     padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 1000;
   }
 
-  .nav-open {
+  /* This class, added by the JavaScript, makes the menu visible */
+  .nav.nav-open {
     display: flex;
   }
 
+  /* Makes the hamburger button visible and clickable on mobile */
   .menu-toggle {
     display: block;
     cursor: pointer;
