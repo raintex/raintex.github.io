@@ -518,3 +518,29 @@ body {
     display: flex; /* Show menu when toggled */
   }
 }
+/* === Mobile Menu Override === */
+@media (max-width: 760px) {
+  .nav {
+    display: none; /* Keep it hidden by default */
+    position: absolute;
+    right: 18px;
+    top: 60px; /* Adjusted position slightly */
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* This is the key part: it shows the menu when the class is added */
+  .nav.nav-open {
+    display: flex !important; /* Use !important to force the display */
+  }
+
+  .menu-toggle {
+    display: block; /* Make sure the button is visible */
+    z-index: 100; /* Ensure the button is on top of other elements */
+  }
+}
