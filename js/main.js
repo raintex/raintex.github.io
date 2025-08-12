@@ -7,7 +7,7 @@ document.getElementById('year5')?.textContent = new Date().getFullYear();
 
 const menu = document.querySelector('.nav');
 const toggle = document.getElementById('menuToggle');
-toggle?.addEventListener('click', ()=> {
-  if(menu.style.display === 'flex' || menu.style.display === 'block') menu.style.display = 'none';
-  else menu.style.display = 'flex';
+
+toggle?.addEventListener('click', () => {
+  menu?.classList.toggle('is-open');
 });
