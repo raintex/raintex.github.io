@@ -530,3 +530,10 @@ body {
 .pub-list .pub-link:hover {
   color: var(--accent-dark);
 }
+/* Center profile photo on mobile */
+@media (max-width: 760px) {
+  .hero-right {
+    display: flex;
+    justify-content: center;
+  }
+}
