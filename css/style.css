@@ -572,3 +572,29 @@ body {
     display: flex; /* This will show the menu */
   }
 }
+/* =================================
+   Mobile Navigation Fix
+   ================================= */
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 18px;
+    top: 60px;
+    background: var(--card);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    z-index: 100;
+  }
+
+  .nav-open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
