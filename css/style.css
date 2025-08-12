@@ -99,7 +99,7 @@ body {
   grid-template-columns: 1fr 360px;
   gap: 28px;
   align-items: start;
-  padding: 44px 0;
+  padding: 44px 28px;
   background: linear-gradient(180deg, var(--bg), var(--bg-2));
   border-bottom: 1px solid rgba(255,255,255,0.05);
   overflow: hidden;
