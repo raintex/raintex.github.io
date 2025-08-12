@@ -67,7 +67,6 @@ body {
   .brand-photo { width: 48px; height: 48px; }
 }
 
-.nav { display: flex; gap: 14px; align-items: center; }
 .nav a {
   color: var(--muted);
   text-decoration: none;
@@ -488,19 +487,34 @@ body {
   .brand-hero .hero-emblem { width: 36px; height: 36px; border-radius: 8px; }
   .brand-hero .rr { font-size: 0.95rem; }
 }
-@media (max-width:760px) {
+/* === Navigation Menu === */
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* --- Mobile Navigation Styles --- */
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block; /* Show hamburger icon */
+  }
+
   .nav {
-    display: none; /* Hidden by default */
-    flex-direction: column; /* Stacks the links vertically */
+    display: none; /* Hide menu by default */
     position: absolute;
-    right: 18px;
     top: 68px;
+    right: 18px;
+    width: 220px;
     background: var(--card);
-    padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    padding: 16px;
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start;
   }
 
   .nav.nav-open {
-    display: flex; /* Shown when the button is clicked */
+    display: flex; /* Show menu when toggled */
   }
+}
