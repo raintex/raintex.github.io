@@ -1,16 +1,17 @@
 :root {
-  --bg:#141212;
-  --bg-2:#1b1717;
-  --card:#231e1e;
-  --muted:#c4aaaa;
-  --text:#f5eaea;
-  --accent:#ff4757;
-  --accent-dark:#cc3847;
+  --bg:#0b0f0d;
+  --bg-2:#101512;
+  --card:#161d19;
+  --muted:#9eb7a7;
+  --text:#e9f6ed;
+  --accent:#5fff7a;
+  --accent-dark:#3bd65b;
   --glass: rgba(255,255,255,0.03);
   --radius:12px;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color-scheme: dark;
 }
+
 
 /* base */
 * { box-sizing: border-box; }
