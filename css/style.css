@@ -1,11 +1,11 @@
 :root {
-  --bg:#042f30;        /* deep teal */
-  --bg-2:#053f3f;
-  --card:#07363a;
-  --muted:#b7d4d2;     /* softer muted tone */
-  --text:#e6f6f5;
-  --accent:#fcbf49;    /* gold accent */
-  --accent-dark:#e3a63b; /* darker gold hover */
+  --bg:#0a1f33;
+  --bg-2:#0d2a45;
+  --card:#112b3c;
+  --muted:#9ec7d9;
+  --text:#e8f7ff;
+  --accent:#33d6ff;
+  --accent-dark:#22aacc;
   --glass: rgba(255,255,255,0.03);
   --radius:12px;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
