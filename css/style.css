@@ -1,11 +1,11 @@
 :root {
-  --bg:#0b0f0d;
-  --bg-2:#101512;
-  --card:#161d19;
-  --muted:#9eb7a7;
-  --text:#e9f6ed;
-  --accent:#5fff7a;
-  --accent-dark:#3bd65b;
+  --bg:#111518;
+  --bg-2:#161c21;
+  --card:#1d242a;
+  --muted:#a4bfa7;
+  --text:#ecf7ef;
+  --accent:#aef359;
+  --accent-dark:#88c946;
   --glass: rgba(255,255,255,0.03);
   --radius:12px;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
